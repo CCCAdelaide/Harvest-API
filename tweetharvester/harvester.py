@@ -1,6 +1,9 @@
 ## Tweet harvester 1.0
 ## Daniel Teh
 import tweepy, json
+from tweetstore import TweetStore
+
+storage = TweetStore('test_db')
 
 ## OAuth Keys
 # Application Key
@@ -17,11 +20,11 @@ auth.set_access_token(access_token, access_token_secret)
 ## Main
 api = tweepy.API(auth)
 print "Interface set up.."
-
+            
 class StdOutListener(tweepy.StreamListener):
     def on_data(self, data):
         decoded = json.loads(data)
-        
+        storage.save_tweet(decoded)
         print '@%s: %s' %(decoded['user']['screen_name'], decoded['text'].encode('ascii', 'ignore'))
         print ""
         return True
@@ -30,11 +33,22 @@ class StdOutListener(tweepy.StreamListener):
 
 l = StdOutListener()
 stream = tweepy.Stream(auth,l)
-print "*"*78
-print "Getting tweets from Melbourne CBD.."
-print "*"*78
 
-# use bbox.com to figure out bounding boxes lat/long coordinates
-# DO NOT USE GOOGLE MAPS! (coordinates are flipped)
-stream.filter(locations=[144.909496,-37.851137,145.001163,-37.785639])
+def start():
+    print "*"*78
+    print "Getting tweets from Adelaide"
+    print "*"*78
+    # use bboxfinder.com to figure out bounding boxes lat/long coordinates
+    # DO NOT USE GOOGLE MAPS! (coordinates are flipped)
+    try:
+        stream.filter(locations=[138.293152,-35.474092,139.108887,-34.486184])
+    except Exception as e:
+        print e
+        start()
     
+start()
+ 
+
+
+
+
