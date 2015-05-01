@@ -2,7 +2,7 @@ import couchdb
 import couchdb.design
 
 #Change this to point to location of couchdb server
-DBURL = 'http://127.0.0.1:5984'
+DBURL = 'http://146.118.96.110:5984/'
 
 class TweetStore(object):
     def __init__(self, dbname, url = DBURL):
