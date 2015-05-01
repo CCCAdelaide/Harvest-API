@@ -7,11 +7,11 @@ storage = TweetStore('test_db')
 
 ## OAuth Keys
 # Application Key
-consumer_key = "pSFHu1r2xAbqtbOsVvOU5vuFP"
-consumer_key_secret = "hjMn6oCPCyBUanidBwAImXX051ILf1JVhrW4IO268qZS00IFvI"
-# Jimmy's personal twitter account key (DON'T GET ME BANNED PLEASE)
-access_token = "46279225-DvynAIpVfLIuNVZZZ6a7LXXU4u1wRuUmv5vj8PmIO"
-access_token_secret = "9FhKfoE9j4fbFCv5GD2aU6AX05mc9XAMit5wOFt3hnSPx"
+consumer_key = "oUhOvqzIA8eOKUqF9aop3o0cr"
+consumer_key_secret = "srTmktMLMgRlWsP8vjO5NOgmLuk1UrBYxdyUrWPvy7iW2fbIpb"
+# Jun's personal twitter account key (DON'T GET ME BANNED PLEASE)
+access_token = "3181667162-nj1ISYIF058pZ4q7WVJFTdCRg49IhSErPCiW0fd"
+access_token_secret = "J53YpiAF2WAXmLbnPgrelLppM7xOchRw8DXWJMJ8NeCrD"
 
 ## Init OAuth
 auth = tweepy.OAuthHandler(consumer_key, consumer_key_secret)
