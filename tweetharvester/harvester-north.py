@@ -2,6 +2,7 @@
 ## Daniel Teh
 import tweepy, json
 from tweetstore import TweetStore
+import time
 
 storage = TweetStore('test_db')
 
@@ -23,6 +24,8 @@ print "Interface set up.."
             
 class StdOutListener(tweepy.StreamListener):
     def on_data(self, data):
+        if data[0] = "4":
+            time.sleep(900)
         decoded = json.loads(data)
         storage.save_tweet(decoded)
         print '@%s: %s' %(decoded['user']['screen_name'], decoded['text'].encode('ascii', 'ignore'))
