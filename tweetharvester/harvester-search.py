@@ -5,7 +5,7 @@ from tweetstore import TweetStore
 import time
 import datetime
 
-storage = TweetStore('test_db')
+storage = TweetStore('tweets_adelaide')
 
 @classmethod
 def parse(cls, api, raw):
@@ -46,14 +46,20 @@ def start():
                            include_entities=True,
                            wait_on_rate_limit=True,
                            lang="en").pages()
-    for pages in search:
-        for results in pages:
-            try:
-                decoded = json.loads(results.json)
-                storage.save_tweet(decoded)
-            except Exception as e:
-                print e
-                pass
+    try:
+        for pages in search:
+            for results in pages:
+                try:
+                    decoded = json.loads(results.json)
+                    storage.save_tweet(decoded)
+                except Exception as e:
+                    print e
+                    pass
+    except Exception as e:
+        print e
+        print "Error.. sleeping for 15 minutes"
+        time.sleep(900)
+        pass
 start()
  
 
