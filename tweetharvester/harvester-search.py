@@ -48,6 +48,7 @@ def start():
                            lang="en").pages()
     try:
         for pages in search:
+            time.sleep(5)
             for results in pages:
                 try:
                     decoded = json.loads(results.json)
@@ -57,8 +58,6 @@ def start():
                     pass
     except Exception as e:
         print e
-        print "Error.. sleeping for 15 minutes"
-        time.sleep(900)
         pass
 start()
  
