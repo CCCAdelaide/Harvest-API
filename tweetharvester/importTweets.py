@@ -11,5 +11,6 @@ with open(filename, 'rb') as tweetfile
     for tweet in reader
         decoded = json.loads(tweet['value'])
         storage.save_tweet(decoded)
+        print("Importing tweet no. %d" % i)
         i+=1
 print ("Inserted %d tweets" % i)
