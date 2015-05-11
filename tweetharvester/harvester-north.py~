@@ -5,7 +5,7 @@ from tweetstore import TweetStore
 import time
 import datetime
 
-storage = TweetStore('tweets_adelaide')
+storage = TweetStore('test_db')
 
 ## OAuth Keys
 # Application Key

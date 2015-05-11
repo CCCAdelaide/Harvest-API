@@ -2,18 +2,16 @@
 ## Daniel Teh
 import tweepy, json
 from tweetstore import TweetStore
-import time
-import datetime
 
-storage = TweetStore('tweets_adelaide')
+storage = TweetStore('test_db')
 
 ## OAuth Keys
 # Application Key
-consumer_key = "pSFHu1r2xAbqtbOsVvOU5vuFP"
-consumer_key_secret = "hjMn6oCPCyBUanidBwAImXX051ILf1JVhrW4IO268qZS00IFvI"
-# Daniel's personal twitter account key (DON'T GET ME BANNED PLEASE)
-access_token = "19472785-vQJRKwqBNuOMs1s5AwTzv3wFWQlqtjeIflj5rNuyy"
-access_token_secret = "R88rhzJBF3Rr85HDHn5kMKRkSmOEGKLJAO4mDrtK2ic7C"
+consumer_key = "oUhOvqzIA8eOKUqF9aop3o0cr"
+consumer_key_secret = "srTmktMLMgRlWsP8vjO5NOgmLuk1UrBYxdyUrWPvy7iW2fbIpb"
+# Jun's personal twitter account key (DON'T GET ME BANNED PLEASE)
+access_token = "3181667162-nj1ISYIF058pZ4q7WVJFTdCRg49IhSErPCiW0fd"
+access_token_secret = "J53YpiAF2WAXmLbnPgrelLppM7xOchRw8DXWJMJ8NeCrD"
 
 ## Init OAuth
 auth = tweepy.OAuthHandler(consumer_key, consumer_key_secret)
@@ -25,10 +23,6 @@ print "Interface set up.."
             
 class StdOutListener(tweepy.StreamListener):
     def on_data(self, data):
-        if data[0] = "4":
-            datetime.datetime.now().time()
-            time.sleep(900)
-            print "Error.. sleeping for 15 minutes"
         decoded = json.loads(data)
         storage.save_tweet(decoded)
         print '@%s: %s' %(decoded['user']['screen_name'], decoded['text'].encode('ascii', 'ignore'))
@@ -47,7 +41,7 @@ def start():
     # use bboxfinder.com to figure out bounding boxes lat/long coordinates
     # DO NOT USE GOOGLE MAPS! (coordinates are flipped)
     try:
-        stream.filter(locations=[138.213501,-34.953493,139.070435,-34.492975])
+        stream.filter(locations=[138.213501,-35.395767,139.070435,-34.953493])
     except Exception as e:
         print e
         start()
