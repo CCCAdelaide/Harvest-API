@@ -1,4 +1,10 @@
-## Tweet harvester 1.0
+## Tweet harvester - Streaming API - NORTH
+##
+## The city of Adelaide was divided in to two regions, north and south
+## Further divisions were not necessary as the city did not receive enough daily
+## volume to warrant working around API rate limits (the rate limit was never
+## reached).
+##
 ## Daniel Teh
 import tweepy, json
 from tweetstore import TweetStore

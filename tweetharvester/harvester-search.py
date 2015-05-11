@@ -1,4 +1,12 @@
-## Tweet harvester 1.0
+## Tweet Harvester - Search API
+## 
+## The twitter search api generally only allows for searches up to 1 week into the
+## past when scraping for tweets.
+## The decision to only use a single node for the Search API was because the city
+## of Adelaide does not get enough volume to warrent several harvesters at once.
+## The decision not to delve into single users timelines stems from the desire
+## to keep data as unbiased.
+##
 ## Daniel Teh
 import tweepy, json
 from tweetstore import TweetStore
