@@ -1,9 +1,13 @@
-import json, csv
+import json, csv, sys
 from tweetstore import TweetStore
 
-filename = 'adelaide.csv'
+# Python script for importing tweets from text file;
+# Usage: importTweets.py *sourcefile *couchdbname
 
-storage = TweetStore('tweets_adelaide')
+# Daniel Teh
+
+filename = sys.argv[1]
+storage = TweetStore(sys.argv[2])
 
 i = 0
 with open(filename, 'rb') as tweetfile:
