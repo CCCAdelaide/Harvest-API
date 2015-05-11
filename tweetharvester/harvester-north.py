@@ -31,7 +31,7 @@ print "Interface set up.."
             
 class StdOutListener(tweepy.StreamListener):
     def on_data(self, data):
-        if data[0] = "4":
+        if data[0] == "4":
             datetime.datetime.now().time()
             time.sleep(900)
             print "Error.. sleeping for 15 minutes"
