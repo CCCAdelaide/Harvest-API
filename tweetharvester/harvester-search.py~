@@ -25,13 +25,18 @@ tweepy.models.Status.first_parse = tweepy.models.Status.parse
 tweepy.models.Status.parse = parse
 
 
-## OAuth Keys
-# Application Key
-consumer_key = "kuPrFsWufTx87nCSc4HKJ6HVU"
-consumer_key_secret = "ks7OQHDyAAL1SV3kUm8SSWywxUQfj2SZfXCxUB7Y8DCXQ3omxy"
-# Daniel's personal twitter account key (DON'T GET ME BANNED PLEASE)
-access_token = "112086608-SYYSPBrqeOCnvNP0FbvlWHycSclndFCjUM0fgRmh"
-access_token_secret = "PLk9Ze50lA2mO4bWDjnRYrzGxm3euNCW9no2lOEloeK1C"
+### OAuth Keys
+## Application Key
+#consumer_key = "kuPrFsWufTx87nCSc4HKJ6HVU"
+#consumer_key_secret = "ks7OQHDyAAL1SV3kUm8SSWywxUQfj2SZfXCxUB7Y8DCXQ3omxy"
+## Daniel's personal twitter account key (DON'T GET ME BANNED PLEASE)
+#access_token = "112086608-SYYSPBrqeOCnvNP0FbvlWHycSclndFCjUM0fgRmh"
+#access_token_secret = "PLk9Ze50lA2mO4bWDjnRYrzGxm3euNCW9no2lOEloeK1C"
+
+consumer_key = "Jgu6HGiLr8lZCvRLeCxuRNphO"
+consumer_key_secret = "TRpm5QNjMeTIemwO2S8QrTT3vv5DHjvNnUseShm7Oniey8w9xm"
+access_token = "3184873568-KAaeFPKVhXEVorENkK59mZBsmZVZfROCbppJzPt"
+access_token_secret = "VV2slmCU1a0Ne3BDlkSv6MxU9cWb5OPYp5V5KAihTDJVS"
 
 ## Init OAuth
 auth = tweepy.OAuthHandler(consumer_key, consumer_key_secret)
