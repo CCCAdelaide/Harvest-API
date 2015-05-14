@@ -90,7 +90,7 @@ stream = tweepy.Stream(auth,l)
 
 def start():
     print "*"*78
-    print "Getting tweets from Adelaide "+region+" using "+API_keys+" Twitter API keys"
+    print "Streaming tweets from Adelaide "+region+" using "+API_keys+" Twitter API keys"
     print "*"*78
     try:
         stream.filter(locations=coordinates)

@@ -30,7 +30,7 @@ else :
 
     # OAuth Keys (DON'T GET US BANNED PLEASE)
     if sys.argv[2] == "daniel" :
-        # Daniel's personal twitter account key
+        # Daniel's personal twitter account key (used for couchNorth Development)
         API_keys = "Daniel's"
         consumer_key = "pSFHu1r2xAbqtbOsVvOU5vuFP"
         consumer_key_secret = "hjMn6oCPCyBUanidBwAImXX051ILf1JVhrW4IO268qZS00IFvI"
@@ -38,21 +38,21 @@ else :
         access_token_secret = "R88rhzJBF3Rr85HDHn5kMKRkSmOEGKLJAO4mDrtK2ic7C"
     elif sys.argv[2] == "jun" :
         API_keys = "Jun Jen's"
-        # Jun's personal twitter account key
+        # Jun's personal twitter account key (used for couchSouth Development)
         consumer_key = "oUhOvqzIA8eOKUqF9aop3o0cr"
         consumer_key_secret = "srTmktMLMgRlWsP8vjO5NOgmLuk1UrBYxdyUrWPvy7iW2fbIpb"
         access_token = "3181667162-nj1ISYIF058pZ4q7WVJFTdCRg49IhSErPCiW0fd"
         access_token_secret = "J53YpiAF2WAXmLbnPgrelLppM7xOchRw8DXWJMJ8NeCrD"
     elif sys.argv[2] == "jimmy" :
         API_keys = "Jimmy's"
-        # Jimmy's personal twitter account key
+        # Jimmy's personal twitter account key (used for couchNorth Deployment)
         consumer_key = "Vuce63dPcOgS0o3sCMk0IrPTh"
         consumer_key_secret = "QMBdwW2fil4nRr815RRc32G7yTfDQvF4imjjg81cwk6vI2qvip"
         access_token = "46279225-DvynAIpVfLIuNVZZZ6a7LXXU4u1wRuUmv5vj8PmIO"
         access_token_secret = "9FhKfoE9j4fbFCv5GD2aU6AX05mc9XAMit5wOFt3hnSPx"
     elif sys.argv[2] == "david" :
         API_keys = "David's"
-        # David's personal twitter account key
+        # David's personal twitter account key (used for couchSouth Deployment)
         consumer_key = "Jgu6HGiLr8lZCvRLeCxuRNphO"
         consumer_key_secret = "TRpm5QNjMeTIemwO2S8QrTT3vv5DHjvNnUseShm7Oniey8w9xm"
         access_token = "3184873568-KAaeFPKVhXEVorENkK59mZBsmZVZfROCbppJzPt"
