@@ -1,3 +1,11 @@
+# Team 9    (Adelaide)
+# 
+# Jun Jen CHAN    (341759)
+# Daniel TEH    (558424)
+# Tou LEE    (656128)
+# David MONROY    (610346)
+# Jaime MARTINEZ    (642231)
+
 ## Tweet Harvester - Search API
 ## 
 ## The twitter search api generally only allows for searches up to 1 week into the
