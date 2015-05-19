@@ -1,8 +1,9 @@
 # Harvest-API
 Tweet Harvester
 
-#Dependencies
+###Dependencies
 -- python-tweepy
+
 -- python-couchdb
 
 The tweet harvester is written in python 2. It leverages the tweepy module to access the twitter streaming and search apis. It also uses the python-couchdb module to access the couchdb db to save tweets.
@@ -17,5 +18,5 @@ API_key: daniel, jun, jimmy, david
 harvester-search.py
 
 
-#Functionality
+###Functionality
 The harvester gathers tweets (by either listening on a stream, or requesting them via search) and then inserts them into the db with the Tweet ID as the primary key.
